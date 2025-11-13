@@ -5,6 +5,14 @@ function addTask() {
   li.textContent = taskInput.value;
   taskList.appendChild(li);
   taskInput.value = '';
+
+  const delBtn = document.createElement('button');
+  delBtn.textContent = "❌";
+  delBtn.onclick = () => li.remove();
+  li.appendChild(delBtn);
+  
+  taskList.appendChild(li);
+  taskInput.value = '';
 }
 
 
